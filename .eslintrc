@@ -1,0 +1,86 @@
+{
+    "extends": [
+        "airbnb",
+        "plugin:react/recommended"
+    ],
+    "plugins": ["react-hooks", "json", "html"],
+    "ignorePatterns": ["src/assets"],
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".ts", ".tsx"]
+          }
+        }
+      },
+    "globals": {
+        "document": "readonly",
+        "window": "readonly",
+        "location": "readonly",
+        "localStorage": "readonly",
+        "FormData": "readonly",
+        "Headers": "readonly",
+        "FileReader": "readonly",
+        "Node": "readonly",
+        "Blob": "readonly",
+        "Image": "readonly",
+        "File":"readonly",
+        "atob": "readonly",
+        "BlobBuilder": "readonly",
+        "MSBlobBuilder":"readonly",
+        "MozBlobBuilder":"readonly",
+        "WebKitBlobBuilder":"readonly"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            { "SwitchCase": 1 }
+        ],
+        "json/*": ["error", "allowComments"],
+        "import/no-extraneous-dependencies": ["error", {
+            "devDependencies": true
+        }],
+        "react/jsx-indent" : ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "import/prefer-default-export": "off",
+        "import/no-webpack-loader-syntax": "off",
+        "react/display-name": "off",
+        "implicit-arrow-linebreak": "off",
+        "function-paren-newline": "off",
+        "react/jsx-filename-extension": "off",
+        "react/prop-types": "off",
+        "max-len": ["error", { "code": 120, "ignoreComments": true, "ignoreStrings": true}],
+        "object-curly-newline": ["error", {
+            "ObjectExpression": { "consistent": true },
+            "ObjectPattern": { "multiline": true, "minProperties": 5 }
+        }],
+        "jsx-a11y/anchor-is-valid": ["error", {
+            "specialLink": ["to"]
+        }],
+        "react/jsx-one-expression-per-line": "off",
+        "operator-linebreak": ["error", "after", { "overrides": { "?": "ignore", ":": "ignore" } }],
+        "react/destructuring-assignment": "warn",
+        "jsx-a11y/label-has-for": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "no-underscore-dangle": "off",
+        "camelcase": "off",
+        "jsx-a11y/no-autofocus": "off",
+        "react/sort-comp": "off",
+        "react/no-multi-comp": "off",
+        "react/no-array-index-key": "warn",
+        "no-console": ["warn", { "allow": ["warn", "error", "info", "group"] }],
+        "react-hooks/rules-of-hooks": "error",
+        "no-unused-expressions": "off",
+        "import/no-cycle": ["error", { "maxDepth": 1 }],
+        "react/jsx-props-no-spreading": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "arrow-parens": "off",
+        "class-methods-use-this": "off",
+        "react-hooks/exhaustive-deps": "warn",
+        "object-shorthand": "error",
+        "import/extensions": "off",
+        "no-param-reassign": "off"
+    }
+}
