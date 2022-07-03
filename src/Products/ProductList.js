@@ -23,7 +23,7 @@ export const ProductList = () => {
                     ...prev,
                     products: {
                         ...prev.products,
-                        productList: [...prev.products.productList, { ...newProduct, reviews: [] }],
+                        productList: [{ ...newProduct, reviews: [] }, ...prev.products.productList],
                     },
                 };
             },

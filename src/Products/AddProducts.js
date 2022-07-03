@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
 import { CREATE_PRODUCT, GET_PRODUCTS } from '../queries';
 import { orderBy } from '../constants';
 import './Product.css';
@@ -7,11 +8,13 @@ import './Product.css';
 export const AddProducts = () => {
     const [title, setTitle] = useState('');
     const [price, setPrice] = useState(0);
+    const navigate = useNavigate();
 
     const [createProduct, { loading, error }] = useMutation(CREATE_PRODUCT, {
         refetchQueries: [
             { query: GET_PRODUCTS, variables: { orderBy } },
         ],
+        onCompleted: () => navigate('/'),
     });
 
     const handleProductCreate = () => {
